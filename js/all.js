@@ -2630,7 +2630,7 @@ let selected = document.createElement('DIV');
 let selectItems = document.createElement('DIV');
 // add div select-selected
 selected.setAttribute('class', 'select-selected');
-selected.textContent = `- - 請選擇行政區- -`;
+selected.textContent = `請選擇行政區`;
 selectZone.appendChild(selected);
 // add div select-items
 selectItems.setAttribute('class', 'select-items select-hide');
