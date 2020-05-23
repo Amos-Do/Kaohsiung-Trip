@@ -2719,7 +2719,7 @@ function loadAllList() {
     selectZone.children[0].innerHTML = str;
 };
 
-// 更新資料
+// 更新資料加入卡片
 function updateCardList(items) {
     let str = '';
     let itemsLen = items.length;
@@ -2743,7 +2743,7 @@ function updateCardList(items) {
     areaList.innerHTML = str;
 };
 
-// 根據資料計算出頁數並更新
+// 根據zoneData計算出頁數並更新
 function pagination(zoneData, nowPage) {
     let dataLen = zoneData.length;
     const perPage = 10;
