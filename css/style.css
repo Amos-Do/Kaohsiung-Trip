@@ -1,0 +1,305 @@
+*, body {
+    font-family:-apple-system,BlinkMacSystemFont,"Microsoft JhengHei UI","Segoe UI","Roboto","Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 118px;
+}
+.header-img {
+    width: 100%;
+    height: 380px;
+    background: url('/images/Hero.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header-content h1 {
+    
+    margin-top: 89px;
+    margin-bottom: 96px;
+}
+.header-content a {
+    text-decoration: none;
+    font-family: PingFangTC-Regular;
+    font-size: 40px;
+    color: #FFFFFF;
+    letter-spacing: 3.89px;
+    padding: 5px;
+
+}
+
+.select-area {
+    position: relative;
+    width: 40%;
+}
+.select-area select {
+    display: none;
+}
+.select-selected {
+    background: rgba(255,255,255,0.70);
+    border: 3px solid #FFFFFF;
+    border-radius: 3px;
+}
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000 transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000 transparent;
+    top: 14px;
+}
+.select-selected.select-arrow-active {
+    background: #FFFFFF;
+}
+.select-items div,.select-selected {
+    font-family: PingFangTC-Regular;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    color: #000000;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+}
+.select-items {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.select-hide {
+    display: none;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hot-area {
+    width: 80%;
+    background: white;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    padding: 20px 26px;
+    margin-top: 79px;
+    margin-bottom: 37px;
+}
+.hot-area h2 {
+    text-align: left;
+    font-family: AppleSystemUIFont;
+    font-size: 18px;
+    color: #000000;
+}
+.hot-area ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+.hot-area ul li {
+    margin: 0 1%;
+}
+.hot-area a {
+    text-decoration: none;
+    font-family: PingFangTC-Regular;
+    font-size: 20px;
+    line-height: 42px;
+    color: #FFFFFF;
+    padding: 6px 40px;
+    border-radius: 5px;
+}
+.bg-color-purple {
+    background: #8A82CC;
+}
+.bg-color-orange {
+    background: #FFA782;
+}
+.bg-color-yellow {
+    background: #F5D105;
+}
+.bg-color-blue {
+    background: #559AC8;
+}
+.down {
+    position: relative;
+    align-self: stretch;
+    /* width: 24px; */
+    height: 24px;
+    background: url('/images/down.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.down::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, #559AC8 0%, #559AC8 50%, transparent 50%);
+    background-size: 15px 1px;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);    
+}
+
+.area {
+    padding: 40px;
+}
+.area h3 {
+    font-family: SFNSDisplay;
+    font-size: 36px;
+    text-align: center;
+    color: #8A82CC;
+    margin: 25px 0;
+}
+.area-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    width: 48%;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    margin: 0 1% 36px;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0.20);
+}
+.card-header {
+    position: relative;
+    width: 100%;
+    height: 155px;
+    background: url('https://khh.travel/FileArtPic.ashx?id=705&w=1280&h=960');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-header .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #FFFFFF;
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.54) 100%);
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    padding: 14px 22px;
+    
+}
+.card-header p:first-child {
+    font-family: SFNSDisplay;
+    font-size: 24px;
+}
+.card-header p:last-child {
+    font-family: PingFangTC-Regular;
+    font-size: 16px;
+}
+.card-content {
+    position: relative;
+    padding: 15px 23px;
+}
+.card-content div {
+    font-family: AppleSystemUIFont;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.card-content .tel {
+    margin: 0;
+}
+.open-time {
+    position: relative;
+}
+.open-time::before {
+    content: url('/images/icons_clock.png');
+    margin-right: 9px;
+}
+.location::before {
+    content: url('/images/icons_pin.png');
+    margin-right: 9px;
+}
+.tel::before {
+    content: url('/images/icons_phone.png');
+    margin-right: 9px;
+}
+.tag {
+    width: 93px;
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+}
+.tag::before {
+    content: url('/images/icons_tag.png');
+    margin-right: 9px;
+}
+
+.pages {
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 41px;
+    padding: 4px 0 ;
+}
+.pages .page-link {
+    text-decoration: none;
+    font-family: AppleSystemUIFont;
+    font-size: 14px;
+    color: #4A4A4A;
+    padding: 4px 4px;
+    margin: 0 8px;
+}
+.page-link.disabled {
+    color: rgba(73,73,73,0.50);
+    cursor: default;
+}
+.page-link.active {
+    color: #559AC8;
+}
+
+#go-top {
+    opacity: 0;
+    position: fixed;
+    bottom: 195px;
+    right: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+footer {
+    text-align: center;
+    padding: 24px 0;
+    background: #559AC8;
+}
+footer p {
+    font-family: AppleSystemUIFont;
+    font-size: 14px;
+    color: #FFFFFF;
+}
