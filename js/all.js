@@ -2634,7 +2634,7 @@ selected.textContent = `請選擇行政區`;
 selectZone.appendChild(selected);
 // add div select-items
 selectItems.setAttribute('class', 'select-items select-hide');
-// add div zone items
+// 抓取option資料後 add div zone items 
 for (let i = 0; i < optionsListLen; i++) {
     let zoneItem = document.createElement('DIV');
     zoneItem.innerHTML = optionsList[i].innerHTML;
@@ -2667,7 +2667,6 @@ selected.addEventListener('click', function (e) {
 });
 pageId.addEventListener('click', switchPage);
 hotZone.addEventListener('click', chooseHotZone)
-
 window.addEventListener('scroll', function (e) {
     // 其餘瀏覽器是依照 <html> , safari 依照 <body> 追蹤滾動位置
     let topScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -2686,7 +2685,7 @@ goTop.addEventListener('click', function (e) {
 // add all data 初始化
 pagination(zoneData, 1);
 
-
+// 選擇熱門景點區
 function chooseHotZone(e) {
     e.preventDefault();
     let zoneName = e.target;
@@ -2694,6 +2693,7 @@ function chooseHotZone(e) {
     chooseZone(zoneName);
 };
 
+// 當被選擇的地區會帶入並更新資料
 function chooseZone(name) {
     zoneData = [];
     for (let g = 0; g < areaData.length; g++) {
@@ -2707,6 +2707,7 @@ function chooseZone(name) {
     document.body.scrollTop = 350;
 };
 
+// 載入所有地區到 option
 function loadAllList() {
     let str = '';
     for (let i = 0; i < areaData.length; i++) {
@@ -2718,6 +2719,7 @@ function loadAllList() {
     selectZone.children[0].innerHTML = str;
 };
 
+// 更新資料
 function updateCardList(items) {
     let str = '';
     let itemsLen = items.length;
@@ -2741,7 +2743,7 @@ function updateCardList(items) {
     areaList.innerHTML = str;
 };
 
-
+// 根據資料計算出頁數並更新
 function pagination(zoneData, nowPage) {
     let dataLen = zoneData.length;
     const perPage = 10;
@@ -2774,6 +2776,7 @@ function pagination(zoneData, nowPage) {
     pageBtn(page);
 };
 
+// add element page 連結
 function pageBtn(page) {
     let str = '';
     let total = page.totalPage;
@@ -2802,6 +2805,7 @@ function pageBtn(page) {
     pageId.innerHTML = str;
 };
 
+// 切換頁數
 function switchPage(e) {
     e.preventDefault();
     if (e.target.nodeName !== 'A') { return; };
