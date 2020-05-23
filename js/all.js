@@ -2807,4 +2807,6 @@ function switchPage(e) {
     if (e.target.nodeName !== 'A') { return; };
     let page = e.target.dataset.page;
     pagination(zoneData, page);
+    document.documentElement.scrollTop = 350;
+    document.body.scrollTop = 350;
 };
